@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;
+  width: 100%;
+  border: 5px solid black;
+
+}
+
+.classTime {
+  font-size: 5em;
+  text-align: center;
+}
