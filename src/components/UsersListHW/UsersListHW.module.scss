@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  padding: 20px;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+
+li:hover {
+  background-color: #71B8C9;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+
+img {
+
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  border: 2px solid black;
+}
+
+.itemContainer {
+  flex-grow: 4;
+
+}
+
+.info {
+  min-width: 100px;
+  max-width: 200px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+button {
+  border: none;
+  height: 40px;
+  background-color: inherit;
+  margin: auto 0;
+}
+
+svg {
+  background-color: inherit;
+}
+
+.isSelected {
+  background-color: #FFDC8C;
+}

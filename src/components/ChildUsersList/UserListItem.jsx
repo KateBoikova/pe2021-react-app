@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes, { object } from 'prop-types';
+
 function UserListItem(props) {
   const {
     user: { id, firstName, lastName, isSelected },
