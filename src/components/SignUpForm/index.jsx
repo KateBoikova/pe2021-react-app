@@ -9,6 +9,8 @@ export default class index extends Component {
     this.state = {
       nameValue: '',
       isNameValid: false,
+      emailValue: '',
+      isEmailValid: false,
       passwordValue: '',
       isPasswordValid: false,
     };
@@ -22,12 +24,16 @@ export default class index extends Component {
     this.setState({ nameValue: value, isNameValid: /^\w+$/.test(value)});
   }
 
+  handleEmailChange = ({target: {value}}) => {
+    this.setState({emailValue: value, isEmailValid: /(\w.{1,30})\@([a-z]{1,6})\.([a-z]{2,4})/.test(value)});
+  }
+
   handlePasswordChange = ({target: {value}}) => {
     this.setState({passwordValue: value, isPasswordValid: /^.{6,30}$/.test(value)});
   }
 
   render() {
-    const { nameValue, passwordValue, isNameValid, isPasswordValid } = this.state;
+    const { nameValue, passwordValue, emailValue, isEmailValid, isNameValid, isPasswordValid } = this.state;
     const nameInput = classNames(
       styles.input,
       {
@@ -43,16 +49,31 @@ export default class index extends Component {
       }
     );
 
+    const emailInput = classNames(
+      styles.input,
+      {
+        [isEmailValid ? styles.valid : styles.invalid] : emailValue,
+      }
+    );
+
     return (
       <form className={styles.container} onSubmit={this.submitHandler}>
         <label className={styles.inputLabel}>
         Name
-        <input className={nameInput}
-        type="text"
-        placeholder="name"
-        value={nameValue}
-        onChange={this.handleNameChange} 
-        />
+          <input className={nameInput}
+          type="text"
+          placeholder="name"
+          value={nameValue}
+          onChange={this.handleNameChange} 
+          />
+        </label>
+        <label className={styles.inputLabel}>
+          Email
+          <input className={emailInput}
+          type="email"
+          placeholder="email"
+          value={emailValue}
+          onChange={this.handleEmailChange} />
         </label>
         <label className={styles.inputLabel}>
           Password
