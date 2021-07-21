@@ -13,10 +13,11 @@ import React from 'react';
 // import ContactsPage from './pages/ContactsPage';
 // import NotFound from './pages/ComponentsPage/NotFound';
 // import CounterWrapper from './components/CounterWrapper';
-import UsersListHW from './components/UsersListHW';
+// import UsersListHW from './components/UsersListHW';
+import SignUpForm from './components/SignUpForm';
 
 function App() {
-  return <UsersListHW />
+  return <SignUpForm />
 }
 
 // function App() {
