@@ -1,6 +1,8 @@
 import React from 'react';
-import Week from '../Week';
+import Week from './../Week';
+import styles from './../Calendar.module.scss';
 import { format, getWeeksInMonth, getWeek } from 'date-fns';
+
 
 const getWeeks = date => {
   const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
@@ -12,7 +14,7 @@ const getWeeks = date => {
   const weeks = [];
 
 for (
-  let i = 0; 
+  let i = firstWeek; 
   i < firstWeek + getWeeksInMonth(date); 
   i++) 
   {
@@ -25,10 +27,10 @@ for (
 function Month(props) {
   const { date } = props;
   return (
-    <div>
-      <section>
+
+      <section className={styles.monthSection}>
         <table>
-          <caption>{format(date, 'MMMM yyyy')}</caption>
+          <caption className={styles.monthAndYear}>{format(date, 'MMMM y')}</caption>
           <thead>
             <tr>
               <th>S</th>
@@ -45,7 +47,6 @@ function Month(props) {
           </tbody>
         </table>
       </section>
-    </div>
   );
 }
 

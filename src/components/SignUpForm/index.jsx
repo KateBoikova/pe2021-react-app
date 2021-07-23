@@ -67,6 +67,7 @@ export default class index extends Component {
           onChange={this.handleNameChange} 
           />
         </label>
+
         <label className={styles.inputLabel}>
           Email
           <input className={emailInput}
@@ -75,6 +76,7 @@ export default class index extends Component {
           value={emailValue}
           onChange={this.handleEmailChange} />
         </label>
+
         <label className={styles.inputLabel}>
           Password
           <input className={passwordInput}
@@ -85,6 +87,7 @@ export default class index extends Component {
           onChange={this.handlePasswordChange} 
           />
         </label>
+        
         <button type='submit'>Sign up</button>
       </form>
     )

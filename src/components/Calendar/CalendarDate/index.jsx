@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import styles from './../Calendar.module.scss';
+import classNames from 'classnames';
 
 function CalendarDate(props) {
-  const { date } = props;
+  const { date, isSameDay, isSameMonth } = props;
+
   return (
-    <td>
-      {date}
+    <td className={classNames({[styles.currentDay]: isSameDay})}>
+      {isSameMonth ? date : ''}
     </td>
   )
 }

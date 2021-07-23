@@ -7,17 +7,18 @@ import React from 'react';
 //   useRouteMatch} from 'react-router-dom';
 // import Greeting from './components/Greeting';
 // import Counter from './components/Counter';
-// import Calendar from './components/Calendar';
+import Calendar from './components/Calendar';
 // import HomePage from './pages/HomePage';
 // import AboutPage from './pages/AboutPage';
 // import ContactsPage from './pages/ContactsPage';
 // import NotFound from './pages/ComponentsPage/NotFound';
 // import CounterWrapper from './components/CounterWrapper';
 // import UsersListHW from './components/UsersListHW';
-import SignUpForm from './components/SignUpForm';
+// import SignUpForm from './components/SignUpForm';
+
 
 function App() {
-  return <SignUpForm />
+  return <Calendar />
 }
 
 // function App() {
