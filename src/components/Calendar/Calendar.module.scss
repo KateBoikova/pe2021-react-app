@@ -35,6 +35,7 @@ body {
 .monthSection {
   width: $width/2;
   height: $width/2;
+  flex-grow: 1;
 }
 
 .daySection {

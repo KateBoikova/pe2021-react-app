@@ -15,7 +15,9 @@ import Calendar from './components/Calendar';
 // import CounterWrapper from './components/CounterWrapper';
 // import UsersListHW from './components/UsersListHW';
 // import SignUpForm from './components/SignUpForm';
+import UsersLoader from './components/UsersLoader';
 
+// const App = () => <PhonesProvider />
 
 function App() {
   return <Calendar />

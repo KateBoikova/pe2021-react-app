@@ -3,21 +3,21 @@ import React from 'react';
 import CalendarDate from './../CalendarDate';
 import PropTypes from 'prop-types';
 
-const getDaysOfWeek = (week, year) => {
+const getDaysOfWeek = (week, year, date) => {
   const startOfWeek = parse(`${year} ${week}`, 'Y w', new Date());
 
   const days = [];
   for (let i = 0; i < 7; ++i) {
     const dateIndex = addDays(startOfWeek, i);
-    days.push(<CalendarDate date={dateIndex.getDate()} isSameDay={isSameDay(new Date(), dateIndex)} isSameMonth={isSameMonth(new Date(), dateIndex)}/>);
+    days.push(<CalendarDate date={dateIndex.getDate()} isSameDay={isSameDay(new Date(), dateIndex)} isSameMonth={isSameMonth(date, dateIndex)}/>);
   }
   return days;
 };
 
 function Week(props) {
-  const { week, year } = props;
+  const { week, year, date } = props;
 
-  return <tr>{getDaysOfWeek(week, year)}</tr>;
+  return <tr>{getDaysOfWeek(week, year, date)}</tr>;
 }
 
 Week.propTypes = {
