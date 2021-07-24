@@ -9,7 +9,7 @@ class Calendar extends Component {
     super(props)
   
     this.state = {
-       date: new Date('December 17, 1995 03:24:00'),
+       date: new Date(),
     }
   }
   
