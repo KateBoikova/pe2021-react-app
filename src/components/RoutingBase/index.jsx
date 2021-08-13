@@ -1,11 +1,4 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from 'react-router-dom';
 import styles from './RoutingBase.module.scss';
 import RouterHW from '../RouterHW';
 

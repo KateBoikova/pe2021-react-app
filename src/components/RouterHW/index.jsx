@@ -7,12 +7,11 @@ import {
   useRouteMatch,
 } from 'react-router-dom';
 import NotFound from '../../pages/ComponentsPage/NotFound';
-import Greeting from './../Greeting';
-import Counter from './../Counter';
-import Stopwatch from './../Stopwatch';
-import ViewPortParams from './../ViewPortParams';
-// import NotFound from './../pages/ComponentsPage/NotFound';
 import styles from './../RoutingBase/RoutingBase.module.scss';
+import HomePage from './../../pages/HomePage';
+import AboutPage from './../../pages/AboutPage';
+import ComponentsPage from '../../pages/ComponentsPage';
+import ContactsPage from './../../pages/ContactsPage';
 
 function RouterHW () {
   return (
@@ -22,27 +21,27 @@ function RouterHW () {
           <Link to={'/'}>Home</Link>
         </li>
         <li>
-          <Link to={'/counter'}>Counter</Link>
+          <Link to={'/aboutpage'}>About us</Link>
         </li>
         <li>
-          <Link to={'/stopwatch'}>Stopwatch</Link>
+          <Link to={'/componentspage'}>Explore our components</Link>
         </li>
         <li>
-          <Link to={'/viewportparams'}>Viewport parameters</Link>
+          <Link to={'/contactspage'}>Contact us</Link>
         </li>
       </ul>
       <Switch>
         <Route exact path={'/'}>
-          <Greeting name={', My Friend!'} />
+          <HomePage />
         </Route>
-        <Route path={'/counter'}>
-          <Counter />
+        <Route path={'/aboutpage'}>
+          <AboutPage />
         </Route>
-        <Route path={'/stopwatch'}>
-          <Stopwatch />
+        <Route path={'/componentspage'}>
+          <ComponentsPage />
         </Route>
-        <Route path={'/viewportparams'}>
-          <ViewPortParams />
+        <Route path={'/contactspage'}>
+          <ContactsPage />
         </Route>
         <Route path={'*'} component={NotFound}></Route>
       </Switch>
