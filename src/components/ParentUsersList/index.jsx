@@ -25,23 +25,23 @@ const dbUsers = [
   },
 ];
 class ParentUsersList extends Component {
-  constructor(props) {
-    super(props)
-  
+  constructor (props) {
+    super(props);
+
     this.state = {
       users: dbUsers.map(u => ({ ...u, isSelected: false })),
     };
   }
-  
+
   setUsers = newUsers => {
-    this.setState({users: newUsers});
+    this.setState({ users: newUsers });
   };
 
-  render() {
-    const {users} = this.state;
+  render () {
+    const { users } = this.state;
     return (
       <>
-        <ChildUsersList users={users} setUsers={this.setUsers}/>
+        <ChildUsersList users={users} setUsers={this.setUsers} />
         <ChildSelectedUsersList users={users} />
       </>
     );

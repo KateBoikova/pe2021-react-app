@@ -1,7 +1,7 @@
-$border-color: #2B8A83;
-$day-background-color: #56CEC4;
-$date-color: #339A93;
-$week-color: #E11456;
+$border-color: #2b8a83;
+$day-background-color: #56cec4;
+$date-color: #339a93;
+$week-color: #e11456;
 
 $width: 600px;
 
@@ -9,7 +9,7 @@ $width: 600px;
   box-sizing: border-box;
 }
 
-html, 
+html,
 body {
   font-size: 18px;
   height: 100%;
@@ -28,7 +28,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 .daySection,
@@ -46,42 +45,42 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  
-    div:first-of-type {
-      font-size: 1.5em;
-      font-weight: 200;
-      text-transform: uppercase;
-      margin-bottom: -40px;
-    }
-    div:last-of-type {
-      font-size: 8em;
-      font-weight: 300;
-    }
+
+  div:first-of-type {
+    font-size: 1.5em;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: -40px;
+  }
+  div:last-of-type {
+    font-size: 8em;
+    font-weight: 300;
+  }
 }
 
 .monthSection {
   font-weight: 600;
   background-color: white;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-    .monthAndYear {
-      font-size: 1.2em;
-      text-transform: uppercase;
-      color: $date-color;
-      font-weight: 700;
-    }
-    th {
-      color: $week-color;
-      padding: 5px;
-    }
-    td {
-      padding: 2px 5px 3px;
-      color: gray;
-      text-align: center;
-    }
+  .monthAndYear {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: $date-color;
+    font-weight: 700;
+  }
+  th {
+    color: $week-color;
+    padding: 5px;
+  }
+  td {
+    padding: 2px 5px 3px;
+    color: gray;
+    text-align: center;
+  }
 }
 
 .currentDay {

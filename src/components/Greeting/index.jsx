@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Greeting(props) {
+function Greeting (props) {
   const { name, isGreeting } = props;
   return (
     <div>
       {isGreeting ? 'Hello' : 'Good bye'} {name}
     </div>
-  )
+  );
 }
 
 Greeting.propTypes = {

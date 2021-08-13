@@ -9,12 +9,18 @@ const getDaysOfWeek = (week, year, date) => {
   const days = [];
   for (let i = 0; i < 7; ++i) {
     const dateIndex = addDays(startOfWeek, i);
-    days.push(<CalendarDate date={dateIndex.getDate()} isSameDay={isSameDay(new Date(), dateIndex)} isSameMonth={isSameMonth(date, dateIndex)}/>);
+    days.push(
+      <CalendarDate
+        date={dateIndex.getDate()}
+        isSameDay={isSameDay(new Date(), dateIndex)}
+        isSameMonth={isSameMonth(date, dateIndex)}
+      />
+    );
   }
   return days;
 };
 
-function Week(props) {
+function Week (props) {
   const { week, year, date } = props;
 
   return <tr>{getDaysOfWeek(week, year, date)}</tr>;

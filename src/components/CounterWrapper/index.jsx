@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Counter from '../Counter';
 
 class CounterWrapper extends Component {
-  render() {
+  render () {
     return (
       <div>
         <Counter />
       </div>
-    )
+    );
   }
 }
 export default CounterWrapper;

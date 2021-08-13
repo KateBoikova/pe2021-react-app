@@ -31,14 +31,13 @@ li {
 }
 
 li:hover {
-  background-color: #71B8C9;
+  background-color: #71b8c9;
   transition-property: background-color, color;
   transition-duration: 1s;
   transition-timing-function: ease-out;
 }
 
 img {
-
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -49,7 +48,6 @@ img {
 
 .itemContainer {
   flex-grow: 4;
-
 }
 
 .info {
@@ -74,5 +72,5 @@ svg {
 }
 
 .isSelected {
-  background-color: #FFDC8C;
+  background-color: #ffdc8c;
 }

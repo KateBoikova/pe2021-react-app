@@ -1,13 +1,13 @@
 import './App.css';
-import React from 'react';
+import React, { Component } from 'react';
 // import { BrowserRouter as Router,
 //   Switch,
 //   Route,
-//   Link, 
+//   Link,
 //   useRouteMatch} from 'react-router-dom';
 // import Greeting from './components/Greeting';
 // import Counter from './components/Counter';
-import Calendar from './components/Calendar';
+// import Calendar from './components/Calendar';
 // import HomePage from './pages/HomePage';
 // import AboutPage from './pages/AboutPage';
 // import ContactsPage from './pages/ContactsPage';
@@ -15,18 +15,87 @@ import Calendar from './components/Calendar';
 // import CounterWrapper from './components/CounterWrapper';
 // import UsersListHW from './components/UsersListHW';
 // import SignUpForm from './components/SignUpForm';
-import UsersLoader from './components/UsersLoader';
+// import UsersLoader from './components/UsersLoader';
+// import PhonesProvider from './components/PhonesProvider';
+// import UsersProvider from './components/UsersProvider';
+// import DataProvider from './components/DataProvider';
+// import UserPage from './pages/UserPage';
+// import { UserContext } from './contexts';
+// import LogInForm2 from './components/forms/LogInForm2';
+// import SignInForm from './components/SignInForm';
+// import MouseClickerH from './components/MouseClickerH';
+// import ComponentDisablerH from './components/ComponentDisablerH';
+// import UserLoaderH from './components/UserLoaderH';
+// import StopwatchH from './components/StopwatchH';
+import RoutingHeaderAndFooter from './components/RoutingBase';
+//============Hooks====================
 
-// const App = () => <PhonesProvider />
+const App = () => <RoutingHeaderAndFooter />;
 
-function App() {
-  return <Calendar />
+//===========Formik===========
+
+// const App = () => <LogInForm2 />;
+
+// ======== Context ==========
+
+// class App extends Component {
+//   constructor(props) {
+//     super(props)
+
+//     this.state = {
+//       user: {
+//         firstName: "Olimpia",
+//         lastName: "Tokio",
+//         src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuDoisN_XW3IVsEn4qXXTiqfTFBCCQOWqDFg&usqp=CAU'
+//       },
+//     };
+//   }
+
+//   render() {
+//     return (
+//       <UserContext.Provider value={this.state.user}>
+//         <UserPage />
+//       </UserContext.Provider>
+//     );
+//   }
+// }
+
+// const Parent = () => <Child />
+
+// const Child = () => {
+//   return <UserContext.Consumer>
+//     { user => {
+//       return JSON.stringify(user);
+//       }}
+//   </UserContext.Consumer>
+// }
+
+{
+  /* ===================Рендер-пропсы========= */
 }
+//const App = () => <DataProvider fileName="/users.json" render={() => {
+
+//   {isFetching && <div>Loading...</div>}
+//   {error && <div>Error!</div>}
+//   <ul>
+//     {users.map(u => (
+//       <li key={u.id}>
+//         <img src={u.src} />
+//         {u.firstName} {u.lastName}</li>))}
+//   </ul>;
+// }
+// }
+
+// function App() {
+//   return <PhonesPrivider />
+// }
+
+//============Router====================
 
 // function App() {
 //   return (
 //     <>
-//     <PageHeader/>
+//     <PageHeader />
 //     <Router>
 //       <ul>
 //         <li>
@@ -45,21 +114,21 @@ function App() {
 
 //       <Switch>
 //         <Route exact path={'/'}>
-//           <HomePage/>
+//           <HomePage />
 //         </Route>
 //         <Route path={'/components'}>
-//           <ComponentsPage/>
+//           <ComponentsPage />
 //         </Route>
 //         <Route path={'/contacts'}>
-//           <ContactsPage/>
+//           <ContactsPage />
 //         </Route>
 //         <Route path={'/about'}>
-//           <AboutPage/>
+//           <AboutPage />
 //         </Route>
 //         <Route path={'*'} component={NotFound} />
 //       </Switch>
 //     </Router>
-//     <PageFooter/>
+//     <PageFooter />
 //     </>
 //   );
 // }
@@ -72,9 +141,9 @@ function App() {
 // }
 
 // function ComponentsPage() {
-//   const { path, url } = useRouteMatch();
+//   const {path, url} = useRouteMatch();
 //   return (
-//       <div> 
+//       <div>
 //       <ul>
 //         <li>
 //           <Link to={`${url}/greeting`}>Greeting</Link>
@@ -88,13 +157,13 @@ function App() {
 //       </ul>
 //       <Switch>
 //           <Route path={`${path}/greeting`}>
-//             <Greeting/>
+//             <Greeting />
 //           </Route>
 //           <Route path={`${path}/counter`}>
-//             <Counter/>
+//             <Counter />
 //           </Route>
 //           <Route path={`${path}/calendar`}>
-//             <Calendar/>
+//             <Calendar />
 //           </Route>
 //           <Route path={`${path}/*`} component={NotFound} />
 
@@ -102,9 +171,6 @@ function App() {
 //     </div>
 //   )
 // }
-
-
-
 
 // function TestComponent (props) {
 //   const {prop1, className} = props;
@@ -114,10 +180,10 @@ function App() {
 //   return <TestComponent prop1={2} className={'test'}> 1111 </TestComponent>
 // }
 
-// import React, { Component } from 'react'
+// import React, {Component} from 'react'
 
 // function NamedList (props) {
-//   const { name, children } = props;
+//   const {name, children} = props;
 //   return (
 //       <>
 //         <h2>{name}</h2>
@@ -137,26 +203,21 @@ function App() {
 //   )
 // }
 
-
-
 // function App() {
 //   return (
-//   <ImageWrapper 
-//     width={'400px'} 
-//     height={'300px'}    
+//   <ImageWrapper
+//     width={'400px'}
+//     height={'300px'}
 //     title={'Cat'}
 //     tabIndex={1}>
-//     <img 
-//     src={'https://ichef.bbci.co.uk/images/ic/1200x675/p06vvmvc.jpg'} 
+//     <img
+//     src={'https://ichef.bbci.co.uk/images/ic/1200x675/p06vvmvc.jpg'}
 //     alt={'cat'}
 
 //     />
 //   </ImageWrapper>);
 // }
 export default App;
-
-
-
 
 // const App = () => <ParentUsersList name={'boo'} isGreeting={false}/>;
 

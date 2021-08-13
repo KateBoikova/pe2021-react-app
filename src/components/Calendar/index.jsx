@@ -5,24 +5,23 @@ import Month from './Month';
 import styles from './Calendar.module.scss';
 
 class Calendar extends Component {
-  constructor(props) {
-    super(props)
-  
+  constructor (props) {
+    super(props);
+
     this.state = {
-       date: new Date(),
-    }
+      date: new Date(),
+    };
   }
-  
-  render() {
+
+  render () {
     const { date } = this.state;
     return (
       <article className={styles.calendarContainer}>
         <Day />
-        <Month date={ date }/>
+        <Month date={date} />
       </article>
     );
   }
-  
 }
 
 export default Calendar;

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './../Calendar.module.scss';
 import { format } from 'date-fns';
 
-function Day() {
+function Day () {
   const currentDate = new Date();
   return (
     <section className={styles.daySection}>

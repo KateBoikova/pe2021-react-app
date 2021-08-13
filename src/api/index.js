@@ -1,7 +1,7 @@
 import queryString from 'query-string';
 import config from './../configs';
 
-export const loadUsers = (options= {}) => {
+export const loadUsers = (options = {}) => {
   const defaultOptions = {
     page: 1,
     results: 10,
@@ -16,5 +16,7 @@ export const loadUsers = (options= {}) => {
 
   const params = queryString.stringify(finalOptions, { arrayFormat: 'comma' });
 
-  return fetch(`${config.BASE_URL}?${params}`).then(response => response.json())
+  return fetch(`${config.BASE_URL}?${params}`).then(response =>
+    response.json()
+  );
 };

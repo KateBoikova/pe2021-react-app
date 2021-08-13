@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes, { object } from 'prop-types';
 
-function UserListItem(props) {
+function UserListItem (props) {
   const {
     user: { id, firstName, lastName, isSelected },
     onClickHandler,
@@ -21,7 +21,7 @@ export const usersPropStructure = PropTypes.shape({
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string,
   isSelected: PropTypes.bool,
-})
+});
 
 UserListItem.propTypes = {
   user: userPropStructure.isRequired,

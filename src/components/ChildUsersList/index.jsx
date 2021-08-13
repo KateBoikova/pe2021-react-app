@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import UserListItem from './UserListItem';
 import PropTypes from 'prop-types';
 
-
 function ChildUsersList (props) {
-  const {users, setUsers} = props;
+  const { users, setUsers } = props;
   const mapUser = (user, index) => {
     const onClickHandler = () => {
       const newUsers = [...users];
@@ -18,10 +17,10 @@ function ChildUsersList (props) {
     );
   };
 
-  ChildUsersList.propTypes = { 
+  ChildUsersList.propTypes = {
     users: PropTypes.arrayOf(usersPropStructure).isRequired,
     setUsers: PropTypes.func,
-  }
+  };
   //UserListItem({user:user})
 
   // render() {

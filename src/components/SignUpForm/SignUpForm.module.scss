@@ -2,10 +2,10 @@
   box-sizing: border-box;
 }
 
-html, 
+html,
 body {
   height: 100%;
-  background-color: #FFEECB;
+  background-color: #ffeecb;
 }
 
 div {
@@ -19,8 +19,8 @@ div {
 
 .container {
   width: 500px;
-  background-color: #C8FBDB;
-  border: 2px solid #904BCF;
+  background-color: #c8fbdb;
+  border: 2px solid #904bcf;
   border-radius: 10px;
   padding: 50px;
 
@@ -48,21 +48,21 @@ button {
 button,
 .input {
   border-radius: 10px;
-  border: 2px solid #C597EF;
+  border: 2px solid #c597ef;
 }
 
 button {
   height: 40px;
-  background-color: #8C5DB7;
-  color: #FFD279;
+  background-color: #8c5db7;
+  color: #ffd279;
   font-weight: 700;
   padding: 0 30px;
   margin-left: auto;
 }
 
 button:hover {
-  background-color: #FFD279;
-  color: #752CB8;
+  background-color: #ffd279;
+  color: #752cb8;
 }
 
 .input {
@@ -70,12 +70,11 @@ button:hover {
 }
 
 .valid {
-  background-color: #92F1B5;
+  background-color: #92f1b5;
   border: 2px solid green;
 }
 
 .invalid {
   border: 2px solid red;
-  background-color: #FFD072;
+  background-color: #ffd072;
 }
-

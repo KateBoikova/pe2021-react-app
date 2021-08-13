@@ -13,19 +13,16 @@
   flex-direction: column;
 
   border: 2px solid green;
-
 }
 
 .inputLabel {
   margin: 20px;
   display: flex;
-
-
 }
 
 .input {
   margin-left: auto;
-  width:  60%;
+  width: 60%;
   outline: none;
 }
 
