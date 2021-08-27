@@ -1,4 +1,4 @@
-import { Form, Formik } from 'formik';
+import { Field, Form, Formik } from 'formik';
 import React from 'react';
 import { LOGIN_SCHEMA } from '../../utils/validatingSchemas';
 import styles from '../forms/FormikHW/FormikHW.module.scss';
@@ -8,6 +8,7 @@ function FormikHWLoginForm () {
   const formikInitialValues = {
     email: '',
     password: '',
+    checked: '',
   };
   const formikHandleSubmit = (values, formikBag) => {
     formikBag.resetForm();
@@ -31,6 +32,10 @@ function FormikHWLoginForm () {
                   placeholder='Email address'
                 />
                 <FormikHWInput name='password' placeholder='Password' />
+                <label className={styles.checkbox}>
+                  <Field type='checkbox' name='checked' value='remember' />
+                  Remember me
+                </label>
                 <button type='submit'>Login</button>
               </Form>
             );

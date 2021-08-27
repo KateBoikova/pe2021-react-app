@@ -1,5 +1,9 @@
 @import '../../../common/styles/templates';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: white;
   background-color: #53aaf8;
@@ -19,8 +23,7 @@ body {
   & button {
     height: 50px;
     width: 100px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin: 10px 100px;
     border-radius: 10px;
     border: 1px solid white;
     background-color: inherit;
@@ -41,6 +44,7 @@ body {
 }
 
 .formContainer {
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +60,10 @@ body {
     'a b'
     'c d'
     'e f'
-    'g g';
+    'g g'
+    'h h'
+    'i i'
+    'j j';
   gap: 20px;
   & input {
     @extend %input;
@@ -87,8 +94,20 @@ body {
   & .passwordConfirm {
     grid-area: f;
   }
-  & button {
+  & .radio1 {
     grid-area: g;
+    @extend %radio;
+  }
+  & .radio2 {
+    grid-area: h;
+    @extend %radio;
+  }
+  & .checkbox {
+    grid-area: i;
+    @extend %checkbox;
+  }
+  & button {
+    grid-area: j;
     @extend %btn;
   }
 }
@@ -109,7 +128,9 @@ body {
   .invalidInput {
     border: 2px solid red;
   }
-
+  & .checkbox {
+    @extend %checkbox;
+  }
   & button {
     @extend %btn;
   }

@@ -7,7 +7,7 @@
 %input {
   outline: none;
   border: 2px solid white;
-  padding: 10px;
+  padding: 30px 10px;
   border-radius: 5px;
   font-size: 16px;
   height: 40px;
@@ -22,4 +22,31 @@
   font-weight: bold;
   color: inherit;
   background-color: #28d2d0;
+}
+
+%checkbox {
+  font-size: 0.8em;
+  & input {
+    height: initial;
+    min-width: unset;
+    min-height: unset;
+    margin: 5px;
+  }
+}
+
+%radio {
+  border: 1px solid white;
+  max-width: 530px;
+  padding: 10px;
+  font-weight: bold;
+  & input {
+    height: initial;
+    min-width: unset;
+    min-height: unset;
+    margin: 5px;
+  }
+  & span {
+    font-size: 0.7em;
+    font-weight: initial;
+  }
 }

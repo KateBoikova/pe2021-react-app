@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import { SIGNIN_SCHEMA } from '../../utils/validatingSchemas';
 import styles from '../forms/FormikHW/FormikHW.module.scss';
 import FormikHWInput from '../forms/FormikHWInput';
@@ -12,6 +12,8 @@ function FormikHWSignUpForm () {
     userEmailAddress: '',
     password: '',
     passwordConfirmation: '',
+    picked: '',
+    checked: '',
   };
   const formikHandleSubmit = (values, formikBag) => {
     formikBag.resetForm();
@@ -62,6 +64,29 @@ function FormikHWSignUpForm () {
                   placeholder='Password Confirmation'
                   className={styles.passwordConfirm}
                 />
+                <label className={styles.radio1}>
+                  <Field type='radio' name='picked' value='buyer' />
+                  Join As a Buyer
+                  <br />
+                  <span>
+                    I am looking for a Name, Logo or Tagline for my business,
+                    brand or product.
+                  </span>
+                </label>
+                <label className={styles.radio2}>
+                  <Field type='radio' name='picked' value='seller' />
+                  Join As a Creative or Marketplace Seller
+                  <br />
+                  <span>
+                    I plan to submit name ideas, Logo designs or sell names in
+                    Domain Marketplace.
+                  </span>
+                </label>
+                <label className={styles.checkbox}>
+                  <Field type='checkbox' name='checked' value='allow' />
+                  Allow Squadhelp to send marketing/promotional offers from time
+                  to time
+                </label>
                 <button type='submit'>Create account</button>
               </Form>
             );
