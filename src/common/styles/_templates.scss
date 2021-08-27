@@ -3,3 +3,23 @@
   justify-content: center;
   align-items: center;
 }
+
+%input {
+  outline: none;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 40px;
+}
+
+%btn {
+  height: 50px;
+  width: auto;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: inherit;
+  background-color: #28d2d0;
+}

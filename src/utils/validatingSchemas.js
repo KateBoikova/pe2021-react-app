@@ -3,51 +3,57 @@ import * as yup from 'yup';
 export const LOGIN_SCHEMA = yup.object({
   email: yup
     .string()
-    .email('Your message')
-    .required(),
+    .email('This must be a valid email')
+    .required('This field is required'),
   password: yup
     .string()
     .matches(
-      /^(?=(.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&*].*).{8,32})$/,
-      'Password must contian ...'
+      /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&*].*).{8,32}$/,
+      'Password must contian at least one capital letter and one special symbol'
     )
-    .min(8)
-    .max(32)
-    .required(),
+    .min(8, 'Password must not contain less then 8 symbols')
+    .max(32, 'Password must not contain more then 32 symbols')
+    .required('This field is required'),
 });
 
 export const SIGNIN_SCHEMA = yup.object({
-  firstName: yup
+  userFirstName: yup
     .string()
-    .min(1)
-    .max(30)
-    .required(),
-  lastName: yup
+    .min(1, 'Your name must not contain less then 1 letter')
+    .max(30, 'Your name must not contain more then 30 letters')
+    .required('This field is required'),
+  userLastName: yup
     .string()
-    .min(1)
-    .max(30)
-    .required(),
-  displayName: yup
+    .min(1, 'Your surname must not contain less then 1 letter')
+    .max(30, 'Your surname must not contain more then 30 letters')
+    .required('This field is required'),
+  userDisplayName: yup
     .string()
-    .min(3)
-    .max(15)
-    .required(),
-  emailAdress: yup
+    .min(3, 'Your display name must not contain less then 3 letters')
+    .max(20, 'Your display name must not contain more then 20 letters')
+    .required('This field is required'),
+  userEmailAddress: yup
     .string()
-    .email()
-    .required(),
+    .email('This must be a valid email')
+    .required('This field is required'),
   password: yup
     .string()
-    .matches(/^(?=(.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&*].*).{8,32})$/)
+    .matches(
+      /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&*].*).{8,32}$/,
+      'Password must contian at least one capital letter and one special symbol'
+    )
     .min(8)
     .max(32)
-    .required(),
+    .required('This field is required'),
   passwordConfirmation: yup
     .string()
-    .matches(/^(?=(.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&*].*).{8,32})$/)
     .min(8)
     .max(32)
-    .required(),
+    .required('This field is required')
+    .oneOf(
+      [yup.ref('password')],
+      'Confirmation password must match your password'
+    ),
 });
 
 // const validatedObject = {
