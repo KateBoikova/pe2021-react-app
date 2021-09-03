@@ -5,29 +5,37 @@ import CONSTANTS from '../../constants';
 import { ThemeContext } from '../../contexts';
 import styles from './ToDoPage.module.scss';
 
-const tasksDB = [{ id: Date.now(), body: 'First task', isDone: false }];
+const tasksDB = [];
 
 function ToDoPage () {
   const [tasks, setTasks] = useState(tasksDB);
-  const [theme, setTheme] = useState(CONSTANTS.THEMES.MULTICOLOR);
+  const [theme, setTheme] = useState(CONSTANTS.THEMES.BEIGE);
 
+  const styleMap = {
+    [CONSTANTS.THEMES.BLACK]: {
+      backgroundColor: 'black',
+    },
+    [CONSTANTS.THEMES.BEIGE]: {
+      backgroundColor: '#ffe2d7',
+    },
+  };
   const changeTheme = () => {
     setTheme(
-      theme === CONSTANTS.THEMES.MULTICOLOR
-        ? CONSTANTS.THEMES.MONOCHROMIC
-        : CONSTANTS.THEMES.MULTICOLOR
+      theme === CONSTANTS.THEMES.BEIGE
+        ? CONSTANTS.THEMES.BLACK
+        : CONSTANTS.THEMES.BEIGE
     );
   };
-  console.log(theme);
+
   return (
     <ThemeContext.Provider value={theme}>
-      <div className={styles.formContainer}>
+      <div className={styles.formContainer} style={styleMap[theme]}>
         <button className={styles.themeButton} onClick={changeTheme}>
           Change theme
         </button>
         <ToDoForm tasks={tasks} setTasks={setTasks} />
         {tasks.length === 0 ? (
-          'There are no tasks'
+          <span className={styles.noTasks}>There are no tasks yet</span>
         ) : (
           <ToDoList tasks={tasks} setTasks={setTasks} />
         )}

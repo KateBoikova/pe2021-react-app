@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import DeleteForeverRoundedIcon from '@material-ui/icons/DeleteForeverRounded';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 import styles from '../../pages/ToDoPage/ToDoPage.module.scss';
@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 function ToDoListItem (props) {
   const { id, body, isDone, deleteTask, markTask } = props;
-  
+
   return (
     <li key={id} className={styles.task}>
       <div

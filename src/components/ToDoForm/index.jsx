@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { TODO_FORM_SCHEMA } from '../../utils/validatingSchemas';
 import classNames from 'classnames';
@@ -29,12 +29,10 @@ function ToDoForm (props) {
           <Form>
             <Field name='body'>
               {({ field, meta }) => {
-                console.log(meta, field);
                 const inputClassNames = classNames(styles.input, {
                   [styles.validInput]: !meta.error && meta.touched,
                   [styles.invalid]: meta.error && meta.touched,
                 });
-                console.log(inputClassNames);
                 return <input {...field} className={inputClassNames} />;
               }}
             </Field>

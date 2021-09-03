@@ -2,8 +2,8 @@ const CONSTANTS = {
   THEMES: {
     LIGHT: 'LIGHT',
     DARK: 'DARK',
-    MULTICOLOR: 'MULTICOLOR',
-    MONOCHROMIC: 'MONOCHROMIC',
+    BLACK: 'BLACK',
+    BEIGE: 'BEIGE',
   },
 };
 
