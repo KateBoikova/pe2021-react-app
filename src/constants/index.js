@@ -1,0 +1,10 @@
+const CONSTANTS = {
+  THEMES: {
+    LIGHT: 'LIGHT',
+    DARK: 'DARK',
+    MULTICOLOR: 'MULTICOLOR',
+    MONOCHROMIC: 'MONOCHROMIC',
+  },
+};
+
+export default CONSTANTS;

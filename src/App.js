@@ -1,6 +1,12 @@
 import './App.css';
-import React, { Component } from 'react';
-import FormikHW from './components/forms/FormikHW';
+import ToDoPage from './pages/ToDoPage';
+// import React, { useState } from 'react';
+// import FormikHW from './components/forms/FormikHW';
+import CounterWithTheme from './components/CounterWithThemeH';
+import { ThemeContext } from './contexts';
+import CONSTANTS from './constants';
+// import UsersLoaderWithCustomHook from './components/UsersLoaderWithCustomHook';
+// import CounterWithReducerH from './components/CounterWithReducerH';
 // import { BrowserRouter as Router,
 //   Switch,
 //   Route,
@@ -30,9 +36,19 @@ import FormikHW from './components/forms/FormikHW';
 // import StopwatchH from './components/StopwatchH';
 // import RoutingHeaderAndFooter from './components/RoutingBase';
 
-//============Hooks====================
+// const App = () => <UsersLoaderWithCustomHook />;
+const App = () => <ToDoPage />;
 
-const App = () => <FormikHW />;
+// const App = () => {
+//   const themes = useState(CONSTANTS.THEMES.LIGHT);
+//   return (
+//     <ThemeContext.Provider value={themes}>
+//       <CounterWithTheme />
+//     </ThemeContext.Provider>
+//   );
+// };
+
+//============Hooks====================
 
 //===========Formik===========
 
@@ -72,9 +88,9 @@ const App = () => <FormikHW />;
 //   </UserContext.Consumer>
 // }
 
-{
-  /* ===================Рендер-пропсы========= */
-}
+// {
+/* ===================Рендер-пропсы========= */
+// }
 //const App = () => <DataProvider fileName="/users.json" render={() => {
 
 //   {isFetching && <div>Loading...</div>}
