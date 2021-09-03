@@ -1,23 +1,22 @@
 import React from 'react';
 import { ErrorMessage, Field } from 'formik';
 import classNames from 'classnames';
-import styles from './Input.module.scss';
+import defaultStyles from './Input.module.scss';
 
 function Input (props) {
-  const { name, ...rest } = props;
+  const { name, styles = defaultStyles, ...rest } = props;
   return (
     <>
-      {/* <Field name={props.name} type={props.type} /> */}
       <Field name={name}>
         {({ field, form, meta }) => {
           const inputClassNames = classNames(styles.input, {
             [styles.validInput]: !meta.error && meta.touched,
             [styles.invalid]: meta.error && meta.touched,
           });
-          return <input {...field} {...rest} classNames={inputClassNames} />;
+          return <input {...field} {...rest} className={inputClassNames} />;
         }}
       </Field>
-      <ErrorMessage name={props.name} component='div' />
+      <ErrorMessage name={name} component='div' className={styles.error} />
     </>
   );
 }

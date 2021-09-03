@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ToDoForm from '../../components/ToDoForm';
+import ToDoForm from '../../components/forms/ToDoForm';
 import ToDoList from '../../components/ToDoList';
 import CONSTANTS from '../../constants';
 import { ThemeContext } from '../../contexts';

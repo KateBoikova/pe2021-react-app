@@ -11,7 +11,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #ffe2d7;
-  padding-top: 20px;
+  padding-top: 50px;
   overflow: auto;
 
   display: flex;
@@ -24,6 +24,7 @@ body {
   color: #4f8b6d;
   background-color: #fbf9f9;
   border-radius: 5px;
+  margin-bottom: 50px;
 }
 
 .noTasks {
@@ -49,12 +50,7 @@ body {
       border-radius: 5px;
       flex-grow: 1;
     }
-    & .invalid {
-      background-color: #d097aa;
-    }
-    & .validInput {
-      background-color: #b6d499;
-    }
+
     & button {
       border-radius: 5px;
       border-color: #b6d499;
@@ -63,22 +59,26 @@ body {
       font-weight: bold;
       flex-grow: 0;
     }
-    & .errorMessage {
-      position: absolute;
-      top: 50px;
-
-      background-color: #af647d;
-      color: #fffdfc;
-      width: fit-content;
-      border-radius: 5px;
-      padding: 3px;
-    }
   }
 }
+.invalid {
+  background-color: #d097aa;
+}
+.validInput {
+  background-color: #b6d499;
+}
+.error {
+  position: absolute;
+  top: 100px;
 
+  background-color: #af647d;
+  color: #fffdfc;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 3px;
+}
 .tasksList {
   background-color: #fff3ee;
-  // min-width: 320px;
   width: 80%;
   margin-top: 0;
   padding: 10px;
