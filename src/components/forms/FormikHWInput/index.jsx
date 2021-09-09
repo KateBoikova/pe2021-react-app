@@ -6,7 +6,7 @@ import styles from './../FormikHW/FormikHW.module.scss';
 function FormikHWInput (props) {
   const { name, ...rest } = props;
   return (
-    <div>
+    <>
       <ErrorMessage name={name} component='div' className={styles.error} />
       <Field name={name}>
         {({ field, meta }) => {
@@ -17,7 +17,7 @@ function FormikHWInput (props) {
           return <input {...field} {...rest} className={inputClassNames} />;
         }}
       </Field>
-    </div>
+    </>
   );
 }
 

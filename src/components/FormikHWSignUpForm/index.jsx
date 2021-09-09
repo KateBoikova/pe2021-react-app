@@ -31,39 +31,52 @@ function FormikHWSignUpForm () {
           {formikProps => {
             return (
               <Form className={styles.signupForm}>
-                <FormikHWInput
-                  name='userFirstName'
-                  placeholder='First name'
-                  className={styles.firstName}
-                />
-                <FormikHWInput
-                  name='userLastName'
-                  placeholder='Last name'
-                  className={styles.lastName}
-                />
-                <FormikHWInput
-                  name='userDisplayName'
-                  placeholder='Display Name'
-                  className={styles.displayName}
-                />
-                <FormikHWInput
-                  type='text'
-                  name='userEmailAddress'
-                  placeholder='Email Address'
-                  className={styles.email}
-                />
-                <FormikHWInput
-                  type='password'
-                  name='password'
-                  placeholder='Password'
-                  className={styles.password}
-                />
-                <FormikHWInput
-                  type='password'
-                  name='passwordConfirmation'
-                  placeholder='Password Confirmation'
-                  className={styles.passwordConfirm}
-                />
+                <div className={styles.nameContainer}>
+                  <FormikHWInput
+                    name='userFirstName'
+                    placeholder='First name'
+                    className={styles.firstName}
+                    className={styles.signUpInput}
+                  />
+                  <FormikHWInput
+                    name='userLastName'
+                    placeholder='Last name'
+                    className={styles.lastName}
+                    className={styles.signUpInput}
+                  />
+                </div>
+                <div className={styles.dispNameAndEmailContainer}>
+                  <FormikHWInput
+                    name='userDisplayName'
+                    placeholder='Display Name'
+                    className={styles.displayName}
+                    className={styles.signUpInput}
+                  />
+                  <FormikHWInput
+                    type='text'
+                    name='userEmailAddress'
+                    placeholder='Email Address'
+                    className={styles.email}
+                    className={styles.signUpInput}
+                  />
+                </div>
+                <div className={styles.passwordContainer}>
+                  <FormikHWInput
+                    type='password'
+                    name='password'
+                    placeholder='Password'
+                    className={styles.password}
+                    className={styles.signUpInput}
+                  />
+                  <FormikHWInput
+                    type='password'
+                    name='passwordConfirmation'
+                    placeholder='Password Confirmation'
+                    className={styles.passwordConfirm}
+                    className={styles.signUpInput}
+                  />
+                </div>
+
                 <label className={styles.radio1}>
                   <Field type='radio' name='picked' value='buyer' />
                   Join As a Buyer

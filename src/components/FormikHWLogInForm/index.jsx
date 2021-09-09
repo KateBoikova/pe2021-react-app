@@ -31,7 +31,11 @@ function FormikHWLoginForm () {
                   type='text'
                   placeholder='Email address'
                 />
-                <FormikHWInput name='password' placeholder='Password' />
+                <FormikHWInput
+                  type='password'
+                  name='password'
+                  placeholder='Password'
+                />
                 <label className={styles.checkbox}>
                   <Field type='checkbox' name='checked' value='remember' />
                   Remember me
