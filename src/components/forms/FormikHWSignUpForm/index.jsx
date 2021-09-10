@@ -1,8 +1,9 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
-import { SIGNIN_SCHEMA } from '../../utils/validatingSchemas';
-import styles from '../forms/FormikHW/FormikHW.module.scss';
-import FormikHWInput from '../forms/FormikHWInput';
+import { SIGNIN_SCHEMA } from '../../../utils/validatingSchemas';
+import styles from '../../../pages/FormikHW/FormikHW.module.scss';
+import FormikHWInput from '../FormikHWInput';
+import FormikHWSignUpHeaders from './FormikHWSignUpHeaders';
 
 function FormikHWSignUpForm () {
   const formikInitialValues = {
@@ -18,11 +19,17 @@ function FormikHWSignUpForm () {
   const formikHandleSubmit = (values, formikBag) => {
     formikBag.resetForm();
   };
+
+  const validationStyles = {
+    validInput: styles.validInput,
+    invalidInput: styles.invalidInput,
+    error: styles.error,
+    inputDiv: styles.inputDiv,
+  };
   return (
     <>
       <div className={styles.formContainer}>
-        <h1 className={styles.mainHeading}>Create an account</h1>
-        <p>We always keep your name and email address private.</p>
+        <FormikHWSignUpHeaders />
         <Formik
           initialValues={formikInitialValues}
           onSubmit={formikHandleSubmit}
@@ -35,29 +42,29 @@ function FormikHWSignUpForm () {
                   <FormikHWInput
                     name='userFirstName'
                     placeholder='First name'
-                    className={styles.firstName}
-                    className={styles.signUpInput}
+                    className={(styles.firstName, styles.signUpInput)}
+                    styles={validationStyles}
                   />
                   <FormikHWInput
                     name='userLastName'
                     placeholder='Last name'
-                    className={styles.lastName}
-                    className={styles.signUpInput}
+                    className={(styles.lastName, styles.signUpInput)}
+                    styles={validationStyles}
                   />
                 </div>
                 <div className={styles.dispNameAndEmailContainer}>
                   <FormikHWInput
                     name='userDisplayName'
                     placeholder='Display Name'
-                    className={styles.displayName}
-                    className={styles.signUpInput}
+                    className={(styles.displayName, styles.signUpInput)}
+                    styles={validationStyles}
                   />
                   <FormikHWInput
                     type='text'
                     name='userEmailAddress'
                     placeholder='Email Address'
-                    className={styles.email}
-                    className={styles.signUpInput}
+                    className={(styles.email, styles.signUpInput)}
+                    styles={validationStyles}
                   />
                 </div>
                 <div className={styles.passwordContainer}>
@@ -65,15 +72,15 @@ function FormikHWSignUpForm () {
                     type='password'
                     name='password'
                     placeholder='Password'
-                    className={styles.password}
-                    className={styles.signUpInput}
+                    className={(styles.password, styles.signUpInput)}
+                    styles={validationStyles}
                   />
                   <FormikHWInput
                     type='password'
                     name='passwordConfirmation'
                     placeholder='Password Confirmation'
-                    className={styles.passwordConfirm}
-                    className={styles.signUpInput}
+                    className={(styles.passwordConfirm, styles.signUpInput)}
+                    styles={validationStyles}
                   />
                 </div>
 

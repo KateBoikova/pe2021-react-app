@@ -1,9 +1,4 @@
-@import '../../../common/styles/templates';
-@import '../../../common/styles/vars';
-
-* {
-  box-sizing: border-box;
-}
+@import '../../common/styles/templates';
 
 body {
   color: white;
@@ -95,18 +90,17 @@ body {
   }
 }
 .loginForm {
-  min-width: 500px;
-  width: 650px;
-  // width: 600px;
+  max-width: 500px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
-  // justify-content: stretch;
+  justify-content: center;
   align-items: stretch;
-  // flex-wrap: wrap;
   & input {
     @extend %input;
+    min-width: 300px;
     margin-bottom: 20px;
-    flex-shrink: 2;
+    width: 100%;
   }
   .validInput {
     border: 2px solid greenyellow;
@@ -117,6 +111,10 @@ body {
   }
   & .checkbox {
     @extend %checkbox;
+    & input {
+      width: unset;
+      min-width: unset;
+    }
   }
   & button {
     @extend %btn;
@@ -124,8 +122,6 @@ body {
 }
 .error {
   position: absolute;
-  top: 5px;
-  left: 40%;
   font-size: 0.8em;
   color: red;
   background-color: white;
@@ -133,4 +129,10 @@ body {
   border: 1px dotted red;
   border-radius: 5px;
   z-index: 2;
+}
+
+.inputDiv {
+  flex-grow: 1;
+  min-width: 300px;
+  margin: 5px;
 }

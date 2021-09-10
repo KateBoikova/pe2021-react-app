@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../forms/FormikHW/FormikHW.module.scss';
 import { Link, useLocation } from 'react-router-dom';
+import styles from '../../pages/FormikHW/FormikHW.module.scss';
 
 function FormikHWHeader () {
   const to = useLocation().pathname === '/' ? '/login' : '/';

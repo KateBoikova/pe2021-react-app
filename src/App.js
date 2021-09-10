@@ -1,7 +1,7 @@
 import './App.css';
-import ToDoPage from './pages/ToDoPage';
+// import ToDoPage from './pages/ToDoPage';
 // import React, { useState } from 'react';
-import FormikHW from './components/forms/FormikHW';
+import FormikHW from './pages/FormikHW';
 // import CounterWithTheme from './components/CounterWithThemeH';
 // import { ThemeContext } from './contexts';
 // import CONSTANTS from './constants';

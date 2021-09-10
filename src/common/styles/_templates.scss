@@ -21,10 +21,7 @@
   flex-wrap: wrap;
 
   & input {
-    margin: 5px;
-    flex-grow: 1;
-    min-width: 300px;
-    position: relative;
+    width: 100%;
   }
 }
 %btn {

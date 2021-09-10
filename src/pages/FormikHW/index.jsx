@@ -1,8 +1,8 @@
 import React from 'react';
-import FormikHWSignUpForm from '../../FormikHWSignUpForm';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import FormikHWLogInForm from '../../FormikHWLogInForm';
-import FormikHWHeader from '../../FormikHWHeader';
+import FormikHWSignUpForm from '../../components/forms/FormikHWSignUpForm';
+import FormikHWLogInForm from '../../components/forms/FormikHWLogInForm';
+import FormikHWHeader from '../../components/FormikHWHeader';
 
 function FormikHW () {
   return (

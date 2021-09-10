@@ -1,12 +1,12 @@
 import React from 'react';
 import { Field, ErrorMessage } from 'formik';
 import classNames from 'classnames';
-import styles from './../FormikHW/FormikHW.module.scss';
 
 function FormikHWInput (props) {
-  const { name, ...rest } = props;
+  const { name, styles, ...rest } = props;
+
   return (
-    <>
+    <div className={styles.inputDiv}>
       <ErrorMessage name={name} component='div' className={styles.error} />
       <Field name={name}>
         {({ field, meta }) => {
@@ -17,7 +17,7 @@ function FormikHWInput (props) {
           return <input {...field} {...rest} className={inputClassNames} />;
         }}
       </Field>
-    </>
+    </div>
   );
 }
 
