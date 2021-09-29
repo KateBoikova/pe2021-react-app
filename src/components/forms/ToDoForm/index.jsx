@@ -38,7 +38,7 @@ function ToDoForm (props) {
               placeholder='Enter your task'
               styles={inputStyles}
             />
-            <button type='onSubmit' title='Add a task'>
+            <button type='submit' title='Add a task'>
               Add task
             </button>
           </Form>

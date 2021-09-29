@@ -5,10 +5,8 @@ import CONSTANTS from '../../constants';
 import { ThemeContext } from '../../contexts';
 import styles from './ToDoPage.module.scss';
 
-const tasksDB = [];
-
 function ToDoPage () {
-  const [tasks, setTasks] = useState(tasksDB);
+  const [tasks, setTasks] = useState([]);
   const [theme, setTheme] = useState(CONSTANTS.THEMES.BEIGE);
 
   const styleMap = {
