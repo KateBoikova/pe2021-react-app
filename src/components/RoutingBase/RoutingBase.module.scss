@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap');
 @import './../../common/styles/templates';
 
-* {
-  box-sizing: border-box;
+body {
   font-family: 'Catamaran', sans-serif;
   font-size: 18px;
 }
+
 .container {
   height: 100vh;
+  margin: 0 10px;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -24,16 +26,22 @@
   text-align: center;
 }
 
-h1 {
+.pageHeader {
   font-size: 1.5em;
 }
 
-img {
+.homePageImg {
+  border-radius: 50px;
+  width: 90%;
+}
+
+.componentsPageImg {
   border-radius: 50px;
 }
 
 .menu {
   @extend %flex-container;
+  flex-wrap: wrap;
   height: 50px;
   & > li {
     list-style-type: none;

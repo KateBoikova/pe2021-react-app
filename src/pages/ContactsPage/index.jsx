@@ -4,7 +4,7 @@ import styles from './../../components/RoutingBase/RoutingBase.module.scss';
 function ContactsPage () {
   return (
     <div>
-      <h1>Contacts</h1>
+      <h2 className={styles.pageHeader}>Contacts</h2>
 
       <p>
         <span className={styles.emphasize}>Call us:</span> 000 111 22 33

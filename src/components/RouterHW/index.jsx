@@ -15,26 +15,26 @@ function RouterHW () {
           <Link to={'/'}>Home</Link>
         </li>
         <li>
-          <Link to={'/aboutpage'}>About us</Link>
+          <Link to={'/about'}>About us</Link>
         </li>
         <li>
-          <Link to={'/componentspage'}>Explore our components</Link>
+          <Link to={'/components'}>Explore our components</Link>
         </li>
         <li>
-          <Link to={'/contactspage'}>Contact us</Link>
+          <Link to={'/contacts'}>Contact us</Link>
         </li>
       </ul>
       <Switch>
         <Route exact path={'/'}>
           <HomePage />
         </Route>
-        <Route path={'/aboutpage'}>
+        <Route path={'/about'}>
           <AboutPage />
         </Route>
-        <Route path={'/componentspage'}>
+        <Route path={'/components'}>
           <ComponentsPage />
         </Route>
-        <Route path={'/contactspage'}>
+        <Route path={'/contacts'}>
           <ContactsPage />
         </Route>
         <Route path={'*'} component={NotFound}></Route>

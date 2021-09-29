@@ -5,11 +5,11 @@ import RouterHW from '../RouterHW';
 function RoutingBase () {
   return (
     <div className={styles.container}>
-      <div className={styles.header}>Welcome to React-app!</div>
-      <div className={styles.main}>
+      <header className={styles.header}>Welcome to React-app!</header>
+      <main className={styles.main}>
         <RouterHW />
-      </div>
-      <div className={styles.footer}>Created by &#xa9;Kate Boikova</div>
+      </main>
+      <footer className={styles.footer}>Created by &#xa9;Kate Boikova</footer>
     </div>
   );
 }

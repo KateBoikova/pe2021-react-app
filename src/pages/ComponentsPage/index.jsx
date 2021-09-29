@@ -11,6 +11,7 @@ function ComponentsPage () {
   const { path, url } = useRouteMatch();
   return (
     <div>
+      <h2 className={styles.pageHeader}>Explore our components</h2>
       <ul className={styles.nestedMenu}>
         <li>
           <Link to={`${url}/greeting`}>Greeting</Link>
@@ -44,6 +45,7 @@ function ComponentsPage () {
         <img
           src='https://images.squarespace-cdn.com/content/v1/531d19bee4b0467fe7e6fcc0/1548191963871-F7R59IYI8XYJCX5H0YNR/CourtneyYu_01_Wizard_Pusheen.png?format=500w'
           alt='Cat magic'
+          className={styles.componentsPageImg}
         />
       </div>
     </div>
